@@ -1,1 +1,2 @@
 github "libgit2/objective-git" "0.12.0"
+github "sparkle-project/sparkle" "1.14.0"
