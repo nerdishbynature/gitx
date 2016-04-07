@@ -72,12 +72,12 @@
 	else
 		description = [NSString stringWithFormat:@"Push updates to remote %@", [remoteRef remoteName]];
 
-    NSString * sdesc = [NSString stringWithFormat:@"p%@", [description substringFromIndex:1]]; 
-	NSAlert *alert = [NSAlert alertWithMessageText:description
-									 defaultButton:@"Push"
-								   alternateButton:@"Cancel"
-									   otherButton:nil
-						 informativeTextWithFormat:@"Are you sure you want to %@?", sdesc];
+    NSString * sdesc = [NSString stringWithFormat:@"p%@", [description substringFromIndex:1]];
+	NSAlert *alert = [[NSAlert alloc] init];
+	alert.messageText = description;
+	alert.informativeText = [NSString stringWithFormat:@"Are you sure you want to %@?", sdesc];
+	[alert addButtonWithTitle:@"Push"];
+	[alert addButtonWithTitle:@"Cancel"];
     [alert setShowsSuppressionButton:YES];
 
 	NSMutableDictionary *info = [NSMutableDictionary dictionary];
@@ -86,25 +86,16 @@
 	if (remoteRef)
 		[info setObject:remoteRef forKey:kGitXRemoteType];
 
-	[alert beginSheetModalForWindow:[historyController.repository.windowController window]
-					  modalDelegate:self
-					 didEndSelector:@selector(confirmPushRefSheetDidEnd:returnCode:contextInfo:)
-						contextInfo:(__bridge_retained void*)info];
-}
+	[alert beginSheetModalForWindow:[historyController.repository.windowController window] completionHandler:^(NSModalResponse returnCode) {
+		[[alert window] orderOut:nil];
 
-- (void)confirmPushRefSheetDidEnd:(NSAlert *)sheet returnCode:(int)returnCode contextInfo:(void *)contextInfo
-{
-    [[sheet window] orderOut:nil];
+		if ([[alert suppressionButton] state] == NSOnState)
+			[PBGitDefaults suppressDialogWarningForDialog:kDialogConfirmPush];
 
-	if ([[sheet suppressionButton] state] == NSOnState)
-        [PBGitDefaults suppressDialogWarningForDialog:kDialogConfirmPush];
-
-	if (returnCode == NSAlertDefaultReturn) {
-		PBGitRef *ref = [(__bridge NSDictionary *)contextInfo objectForKey:kGitXBranchType];
-		PBGitRef *remoteRef = [(__bridge NSDictionary *)contextInfo objectForKey:kGitXRemoteType];
-
-		[historyController.repository beginPushRef:ref toRemote:remoteRef];
-	}
+		if (returnCode == NSAlertFirstButtonReturn) {
+			[historyController.repository beginPushRef:ref toRemote:remoteRef];
+		}
+	}];
 }
 
 - (void) pushUpdatesToRemote:(PBRefMenuItem *)sender
