@@ -479,7 +479,7 @@
 - (NSPanel *)rewindPanelReverse:(BOOL)isReversed
 {
 	NSRect windowFrame = [[[historyController view] window] frame];
-	NSRect historyFrame = [[historyController view] convertRectToBase:[[historyController view] frame]];
+	NSRect historyFrame = [historyController.view convertRect:historyController.view.frame toView:historyController.view];
 	NSRect panelRect = NSMakeRect(0.0f, 0.0f, kRewindPanelSize, kRewindPanelSize);
 	panelRect.origin.x = windowFrame.origin.x + historyFrame.origin.x + ((historyFrame.size.width - kRewindPanelSize) / 2.0f);
 	panelRect.origin.y = windowFrame.origin.y + historyFrame.origin.y + ((historyFrame.size.height - kRewindPanelSize) / 2.0f);
@@ -493,7 +493,9 @@
 	[panel setOpaque:NO];
 	[panel setBackgroundColor:[NSColor clearColor]];
 	[panel setHasShadow:NO];
+#if (MAC_OS_X_VERSION_MAX_ALLOWED < MAC_OS_X_VERSION_10_10)
 	[panel useOptimizedDrawing:YES];
+#endif
 	[panel setAlphaValue:0.0f];
 
 	NSBox *box = [[NSBox alloc] initWithFrame:[[panel contentView] frame]];
@@ -505,7 +507,6 @@
 	[[panel contentView] addSubview:box];
 
 	NSImage *rewindImage = [[NSImage imageNamed:@"rewindImage"] copy];
-	[rewindImage setFlipped:isReversed];
 	NSSize imageSize = [rewindImage size];
 	NSRect imageViewFrame = NSMakeRect(21.0f, 5.0f, imageSize.width, imageSize.height);
 	NSImageView *rewindImageView = [[NSImageView alloc] initWithFrame:imageViewFrame];
