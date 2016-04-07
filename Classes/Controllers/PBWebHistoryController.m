@@ -11,6 +11,7 @@
 #import <ObjectiveGit/GTConfiguration.h>
 #import "PBGitRef.h"
 #import "PBGitRevSpecifier.h"
+#import <WebKit/WebKit.h>
 
 @implementation PBWebHistoryController
 
@@ -138,9 +139,9 @@ contextMenuItemsForElement:(NSDictionary *)element
 			NSLog(@"Could not find selected ref!");
 			return defaultMenuItems;
 		}
-		if ([node hasAttributes] && [[node attributes] getNamedItem:@"representedFile"])
-			return [historyController menuItemsForPaths:[NSArray arrayWithObject:[[[node attributes] getNamedItem:@"representedFile"] value]]];
-        else if ([[node class] isEqual:[DOMHTMLImageElement class]]) {
+		if ([node hasAttributes] && [[node attributes] getNamedItem:@"representedFile"]) {
+			return [historyController menuItemsForPaths:@[[[[node attributes] getNamedItem:@"representedFile"] nodeValue]]];
+		} else if ([[node class] isEqual:[DOMHTMLImageElement class]]) {
             // Copy Image is the only menu item that makes sense here since we don't need
 			// to download the image or open it in a new window (besides with the
 			// current implementation these two entries can crash GitX anyway)
