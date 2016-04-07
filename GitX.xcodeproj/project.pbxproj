@@ -12,6 +12,12 @@
 		2393023E1CB639640073F8D6 /* ObjectiveGit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2393023C1CB637EA0073F8D6 /* ObjectiveGit.framework */; };
 		239302401CB63A740073F8D6 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2393023F1CB63A740073F8D6 /* Sparkle.framework */; };
 		239302421CB63B690073F8D6 /* MGScopeBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239302411CB63B690073F8D6 /* MGScopeBar.framework */; };
+		239302431CB63D850073F8D6 /* MGScopeBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239302411CB63B690073F8D6 /* MGScopeBar.framework */; };
+		239302441CB63D850073F8D6 /* MGScopeBar.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 239302411CB63B690073F8D6 /* MGScopeBar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		239302451CB63D860073F8D6 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2393023F1CB63A740073F8D6 /* Sparkle.framework */; };
+		239302461CB63D860073F8D6 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2393023F1CB63A740073F8D6 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		239302471CB63D860073F8D6 /* ObjectiveGit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2393023C1CB637EA0073F8D6 /* ObjectiveGit.framework */; };
+		239302481CB63D860073F8D6 /* ObjectiveGit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2393023C1CB637EA0073F8D6 /* ObjectiveGit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2682AABB1929140E00271A4D /* GTOID+JavaScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 2682AABA1929140E00271A4D /* GTOID+JavaScript.m */; };
 		4A0B5BD315FE2DA600ACCB61 /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0B5BD215FE2DA600ACCB61 /* libssl.dylib */; };
 		4A0B5BD515FE2DC900ACCB61 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0B5BD415FE2DC900ACCB61 /* libcrypto.dylib */; };
@@ -194,6 +200,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				239302441CB63D850073F8D6 /* MGScopeBar.framework in CopyFiles */,
+				239302481CB63D860073F8D6 /* ObjectiveGit.framework in CopyFiles */,
+				239302461CB63D860073F8D6 /* Sparkle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,11 +491,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				239302421CB63B690073F8D6 /* MGScopeBar.framework in Frameworks */,
+				239302471CB63D860073F8D6 /* ObjectiveGit.framework in Frameworks */,
 				239302401CB63A740073F8D6 /* Sparkle.framework in Frameworks */,
 				2393023D1CB637EA0073F8D6 /* ObjectiveGit.framework in Frameworks */,
 				4A0B5BD515FE2DC900ACCB61 /* libcrypto.dylib in Frameworks */,
 				4A0B5BD315FE2DA600ACCB61 /* libssl.dylib in Frameworks */,
+				239302431CB63D850073F8D6 /* MGScopeBar.framework in Frameworks */,
 				4A4EF0BE142CBC59001B8CDF /* libz.dylib in Frameworks */,
+				239302451CB63D860073F8D6 /* Sparkle.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				F56526240E03D85900F03B52 /* WebKit.framework in Frameworks */,
 				911112370E5A097800BF76B4 /* Security.framework in Frameworks */,
@@ -1282,6 +1294,7 @@
 				INFOPLIST_FILE = Resources/Info.plist;
 				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "-traditional";
 				INSTALL_PATH = /Applications;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.phere.GitX;
 				PRODUCT_NAME = GitX;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1303,6 +1316,7 @@
 				INFOPLIST_FILE = Resources/Info.plist;
 				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "-traditional";
 				INSTALL_PATH = /Applications;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.phere.GitX;
 				PRODUCT_NAME = GitX;
 				STRIP_INSTALLED_PRODUCT = YES;
