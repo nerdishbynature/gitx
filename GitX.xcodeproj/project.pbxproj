@@ -11,6 +11,7 @@
 		2393023D1CB637EA0073F8D6 /* ObjectiveGit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2393023C1CB637EA0073F8D6 /* ObjectiveGit.framework */; };
 		2393023E1CB639640073F8D6 /* ObjectiveGit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2393023C1CB637EA0073F8D6 /* ObjectiveGit.framework */; };
 		239302401CB63A740073F8D6 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2393023F1CB63A740073F8D6 /* Sparkle.framework */; };
+		239302421CB63B690073F8D6 /* MGScopeBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239302411CB63B690073F8D6 /* MGScopeBar.framework */; };
 		2682AABB1929140E00271A4D /* GTOID+JavaScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 2682AABA1929140E00271A4D /* GTOID+JavaScript.m */; };
 		4A0B5BD315FE2DA600ACCB61 /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0B5BD215FE2DA600ACCB61 /* libssl.dylib */; };
 		4A0B5BD515FE2DC900ACCB61 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0B5BD415FE2DC900ACCB61 /* libcrypto.dylib */; };
@@ -131,8 +132,6 @@
 		4A5D777314A9AEB000DF6C68 /* PBSourceViewAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5D776D14A9AEB000DF6C68 /* PBSourceViewAction.m */; };
 		4A5D777414A9AEB000DF6C68 /* PBSourceViewBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5D776F14A9AEB000DF6C68 /* PBSourceViewBadge.m */; };
 		4A5D777514A9AEB000DF6C68 /* PBSourceViewRemote.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5D777214A9AEB000DF6C68 /* PBSourceViewRemote.m */; };
-		4A8F6B4B14A9B6C20002F4D7 /* MGScopeBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8F6B4714A9B6110002F4D7 /* MGScopeBar.framework */; };
-		4A8F6B4C14A9B6C90002F4D7 /* MGScopeBar.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4A8F6B4714A9B6110002F4D7 /* MGScopeBar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4A90A73514A9D24300D0DA02 /* GitX.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 4A90A73414A9D24300D0DA02 /* GitX.sdef */; };
 		4AB057E31652652000DE751D /* GitRepoFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB057E21652652000DE751D /* GitRepoFinder.m */; };
 		4AB057E41652652000DE751D /* GitRepoFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB057E21652652000DE751D /* GitRepoFinder.m */; };
@@ -179,27 +178,6 @@
 			remoteGlobalIDString = 913D5E480E55644600CECEA2;
 			remoteInfo = "cli tool";
 		};
-		4A8F6B4414A9B6110002F4D7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4A8F6B3B14A9B6100002F4D7 /* MGScopeBar.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8D1107320486CEB800E47090;
-			remoteInfo = MGScopeBar;
-		};
-		4A8F6B4614A9B6110002F4D7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4A8F6B3B14A9B6100002F4D7 /* MGScopeBar.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AAE785781419184700A6955E;
-			remoteInfo = MGScopeBar.framework;
-		};
-		4A8F6B4914A9B6B80002F4D7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4A8F6B3B14A9B6100002F4D7 /* MGScopeBar.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = AAE785771419184700A6955E;
-			remoteInfo = MGScopeBar.framework;
-		};
 		551BF174112F3F3500265053 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
@@ -216,7 +194,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4A8F6B4C14A9B6C90002F4D7 /* MGScopeBar.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +204,7 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		2393023C1CB637EA0073F8D6 /* ObjectiveGit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectiveGit.framework; path = Carthage/Build/Mac/ObjectiveGit.framework; sourceTree = "<group>"; };
 		2393023F1CB63A740073F8D6 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Carthage/Build/Mac/Sparkle.framework; sourceTree = "<group>"; };
+		239302411CB63B690073F8D6 /* MGScopeBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MGScopeBar.framework; path = Carthage/Build/Mac/MGScopeBar.framework; sourceTree = "<group>"; };
 		2682AAB91929140E00271A4D /* GTOID+JavaScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTOID+JavaScript.h"; sourceTree = "<group>"; };
 		2682AABA1929140E00271A4D /* GTOID+JavaScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTOID+JavaScript.m"; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
@@ -441,7 +419,6 @@
 		4A5D777014A9AEB000DF6C68 /* PBSourceViewItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSourceViewItems.h; sourceTree = "<group>"; };
 		4A5D777114A9AEB000DF6C68 /* PBSourceViewRemote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSourceViewRemote.h; sourceTree = "<group>"; };
 		4A5D777214A9AEB000DF6C68 /* PBSourceViewRemote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBSourceViewRemote.m; sourceTree = "<group>"; };
-		4A8F6B3B14A9B6100002F4D7 /* MGScopeBar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MGScopeBar.xcodeproj; path = MGScopeBar/MGScopeBar.xcodeproj; sourceTree = "<group>"; };
 		4A90A72714A9C12F00D0DA02 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = SOURCE_ROOT; };
 		4A90A72814A9C12F00D0DA02 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = SOURCE_ROOT; };
 		4A90A72914A9C12F00D0DA02 /* GitX_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GitX_Prefix.pch; sourceTree = SOURCE_ROOT; };
@@ -504,11 +481,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				239302421CB63B690073F8D6 /* MGScopeBar.framework in Frameworks */,
 				239302401CB63A740073F8D6 /* Sparkle.framework in Frameworks */,
 				2393023D1CB637EA0073F8D6 /* ObjectiveGit.framework in Frameworks */,
 				4A0B5BD515FE2DC900ACCB61 /* libcrypto.dylib in Frameworks */,
 				4A0B5BD315FE2DA600ACCB61 /* libssl.dylib in Frameworks */,
-				4A8F6B4B14A9B6C20002F4D7 /* MGScopeBar.framework in Frameworks */,
 				4A4EF0BE142CBC59001B8CDF /* libz.dylib in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				F56526240E03D85900F03B52 /* WebKit.framework in Frameworks */,
@@ -548,7 +525,6 @@
 			isa = PBXGroup;
 			children = (
 				4A5D762114A9A9CC00DF6C68 /* Classes */,
-				4A5D773E14A9AB3A00DF6C68 /* External Sources */,
 				4A5D757C14A9A90500DF6C68 /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
@@ -560,6 +536,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				239302411CB63B690073F8D6 /* MGScopeBar.framework */,
 				2393023F1CB63A740073F8D6 /* Sparkle.framework */,
 				2393023C1CB637EA0073F8D6 /* ObjectiveGit.framework */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
@@ -903,23 +880,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		4A5D773E14A9AB3A00DF6C68 /* External Sources */ = {
-			isa = PBXGroup;
-			children = (
-				4A8F6B3B14A9B6100002F4D7 /* MGScopeBar.xcodeproj */,
-			);
-			name = "External Sources";
-			sourceTree = "<group>";
-		};
-		4A8F6B3C14A9B6100002F4D7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4A8F6B4514A9B6110002F4D7 /* MGScopeBar.app */,
-				4A8F6B4714A9B6110002F4D7 /* MGScopeBar.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -953,7 +913,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				4A8F6B4A14A9B6B80002F4D7 /* PBXTargetDependency */,
 				4A774CBD142F464D00E158CC /* PBXTargetDependency */,
 				551BF175112F3F3500265053 /* PBXTargetDependency */,
 			);
@@ -999,12 +958,6 @@
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* GitTest */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 4A8F6B3C14A9B6100002F4D7 /* Products */;
-					ProjectRef = 4A8F6B3B14A9B6100002F4D7 /* MGScopeBar.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* GitX */,
@@ -1013,23 +966,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		4A8F6B4514A9B6110002F4D7 /* MGScopeBar.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = MGScopeBar.app;
-			remoteRef = 4A8F6B4414A9B6110002F4D7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4A8F6B4714A9B6110002F4D7 /* MGScopeBar.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = MGScopeBar.framework;
-			remoteRef = 4A8F6B4614A9B6110002F4D7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8D1107290486CEB800E47090 /* Resources */ = {
@@ -1248,11 +1184,6 @@
 			isa = PBXTargetDependency;
 			target = 913D5E480E55644600CECEA2 /* cli tool */;
 			targetProxy = 4A774CBC142F464D00E158CC /* PBXContainerItemProxy */;
-		};
-		4A8F6B4A14A9B6B80002F4D7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MGScopeBar.framework;
-			targetProxy = 4A8F6B4914A9B6B80002F4D7 /* PBXContainerItemProxy */;
 		};
 		551BF175112F3F3500265053 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
