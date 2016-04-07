@@ -1,0 +1,72 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "665C3A6ACA9E05ADE94CE004D869E5EBC3F3FEB8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B3AD2FC95F69A329461676C191735C5D1274A280" : 0,
+    "2FD0F96481B39E576130E173BF6923CF52C91FF7" : 0,
+    "665C3A6ACA9E05ADE94CE004D869E5EBC3F3FEB8" : 0,
+    "70783EE7218D87FCBAABD7787F6E3A25EFFAFB2F" : 0,
+    "EF1CF5E1F342919DE309B5C9DAEDDCF1D12D0402" : 0,
+    "E084C86B03F81D63323C9E7510697EA528A758C7" : 0,
+    "8884BD3B878631A1500EC9895E6A3CF4CB0AB3DB" : 0,
+    "DE2646290BDFCDBBA9BF874E0EEDB7E29546CD5E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D4D494CE-6532-45CC-8AF4-F8E70DBB5330",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B3AD2FC95F69A329461676C191735C5D1274A280" : "gitx\/MGScopeBar\/",
+    "2FD0F96481B39E576130E173BF6923CF52C91FF7" : "gitx\/objective-git\/ObjectiveGitTests\/specta\/",
+    "665C3A6ACA9E05ADE94CE004D869E5EBC3F3FEB8" : "gitx\/",
+    "70783EE7218D87FCBAABD7787F6E3A25EFFAFB2F" : "gitx\/objective-git\/External\/libgit2\/",
+    "EF1CF5E1F342919DE309B5C9DAEDDCF1D12D0402" : "gitx\/Sparkle\/",
+    "E084C86B03F81D63323C9E7510697EA528A758C7" : "gitx\/objective-git\/External\/Configuration\/",
+    "8884BD3B878631A1500EC9895E6A3CF4CB0AB3DB" : "gitx\/objective-git\/ObjectiveGitTests\/expecta\/",
+    "DE2646290BDFCDBBA9BF874E0EEDB7E29546CD5E" : "gitx\/objective-git\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "GitX",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "GitX.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/specta\/specta.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2FD0F96481B39E576130E173BF6923CF52C91FF7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:rowanj\/gitx.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "665C3A6ACA9E05ADE94CE004D869E5EBC3F3FEB8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/libgit2\/libgit2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "70783EE7218D87FCBAABD7787F6E3A25EFFAFB2F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/specta\/expecta.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8884BD3B878631A1500EC9895E6A3CF4CB0AB3DB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git:\/\/github.com\/rowanj\/MGScopeBar.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B3AD2FC95F69A329461676C191735C5D1274A280"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git:\/\/github.com\/rowanj\/objective-git.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DE2646290BDFCDBBA9BF874E0EEDB7E29546CD5E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jspahrsummers\/xcconfigs.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E084C86B03F81D63323C9E7510697EA528A758C7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rowanj\/Sparkle.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EF1CF5E1F342919DE309B5C9DAEDDCF1D12D0402"
+    }
+  ]
+}
