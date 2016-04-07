@@ -282,37 +282,31 @@ NSString *PBGitRepositoryDocumentType = @"Git Repository";
 	// clear out ref caches
 	_headRef = nil;
 	_headSha = nil;
-	self->refs = [NSMutableDictionary dictionary];
+	self.refs = [NSMutableDictionary dictionary];
 	
-	NSError* error = nil;
-	NSArray* allRefs = [self.gtRepo referenceNamesWithError:&error];
+	NSError *error;
+	NSArray *allRefs = [self.gtRepo referenceNamesWithError:&error];
 	
 	// load all named refs
 	NSMutableOrderedSet *oldBranches = [self.branchesSet mutableCopy];
-	for (NSString* referenceName in allRefs)
-	{
-		GTReference* gtRef =
-		[[GTReference alloc] initByLookingUpReferenceNamed:referenceName
-											  inRepository:self.gtRepo
-													 error:&error];
+	for (NSString* referenceName in allRefs) {
+		GTReference *gitRef = [self.gtRepo lookUpReferenceWithName:referenceName error:&error];
 		
-		if (gtRef == nil)
-		{
+		if (!gitRef) {
 			NSLog(@"Reference \"%@\" could not be found in the repository", referenceName);
-			if (error)
-			{
+			if (error) {
 				NSLog(@"Error loading reference was: %@", error);
 			}
 			continue;
 		}
-		if (gtRef.remote && gtRef.referenceType == GTReferenceTypeSymbolic) {
+		if (gitRef.remote && gitRef.referenceType == GTReferenceTypeSymbolic) {
 			// Hide remote symbolic references like origin/HEAD
 			continue;
 		}
-		PBGitRef* gitRef = [PBGitRef refFromString:referenceName];
-		PBGitRevSpecifier* revSpec = [[PBGitRevSpecifier alloc] initWithRef:gitRef];
+		PBGitRef *pbGitRef = [PBGitRef refFromString:referenceName];
+		PBGitRevSpecifier* revSpec = [[PBGitRevSpecifier alloc] initWithRef:pbGitRef];
 		[self addBranch:revSpec];
-		[self addRef:gtRef];
+		[self addRef:gitRef];
 		[oldBranches removeObject:revSpec];
 	}
 	
@@ -386,9 +380,7 @@ NSString *PBGitRepositoryDocumentType = @"Git Repository";
     
 	
 	NSError* error = nil;
-	GTReference* gtRef = [GTReference referenceByLookingUpReferencedNamed:ref.ref
-															 inRepository:self.gtRepo
-																	error:&error];
+	GTReference* gtRef = [self.gtRepo lookUpReferenceWithName:ref.ref error:&error];
 	if (error)
 	{
 		NSLog(@"Error looking up ref for %@", ref.ref);
@@ -490,7 +482,7 @@ NSString *PBGitRepositoryDocumentType = @"Git Repository";
 - (BOOL) refExists:(PBGitRef *)ref
 {
 	NSError *gtError = nil;
-	GTReference *gtRef = [GTReference referenceByLookingUpReferencedNamed:ref.ref inRepository:self.gtRepo error:&gtError];
+	GTReference *gtRef = [self.gtRepo lookUpReferenceWithName:ref.ref error:&gtError];
 	if (gtRef) {
 		return YES;
 	}
