@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/nerdishbynature/gitx.svg?branch=master)](https://travis-ci.org/nerdishbynature/gitx)
+
 # What is GitX?
 
 GitX is a graphical client for the `git` version control system, written

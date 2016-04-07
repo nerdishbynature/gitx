@@ -1,0 +1,10 @@
+osx_image: xcode7.3
+language: objective-c
+before_install:
+  - brew update
+  - brew outdated carthage || brew upgrade carthage
+  - gem install scan
+install: carthage bootstrap
+script: scan
+notifications:
+  email: false
