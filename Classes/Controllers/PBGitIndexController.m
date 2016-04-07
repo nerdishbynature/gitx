@@ -247,7 +247,7 @@
 	NSString *workingDirectory = [[commitController.repository workingDirectory] stringByAppendingString:@"/"];
 	NSString *path = [workingDirectory stringByAppendingPathComponent:[[selectedFiles objectAtIndex:0] path]];
 	NSWorkspace *ws = [NSWorkspace sharedWorkspace];
-	[ws selectFile: path inFileViewerRootedAtPath:nil];
+	[ws selectFile:path inFileViewerRootedAtPath:@""];
 }
 
 - (void)moveToTrashAction:(id)sender

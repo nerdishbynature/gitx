@@ -163,17 +163,17 @@ static OpenRecentController* recentsDialog = nil;
 	}
 
 	if (success) {
-		[[NSAlert alertWithMessageText:@"Installation Complete"
-	                    defaultButton:nil
-	                  alternateButton:nil
-	                      otherButton:nil
-	        informativeTextWithFormat:@"The gitx tool has been installed to %@", installationPath] runModal];
+		NSAlert *alert = [[NSAlert alloc] init];
+		alert.messageText = @"Installation Complete";
+		alert.informativeText = [NSString stringWithFormat:@"The gitx tool has been installed to %@", installationPath];
+		[alert addButtonWithTitle:@"OK"];
+		[alert runModal];
 	} else {
-		[[NSAlert alertWithMessageText:@"Installation Failed"
-	                    defaultButton:nil
-	                  alternateButton:nil
-	                      otherButton:nil
-	        informativeTextWithFormat:@"Installation to %@ failed", installationPath] runModal];
+		NSAlert *alert = [[NSAlert alloc] init];
+		alert.messageText = @"Installation Failed";
+		alert.informativeText = [NSString stringWithFormat:@"Installation to %@ failed", installationPath];
+		[alert addButtonWithTitle:@"OK"];
+		[alert runModal];
 	}
 }
 
