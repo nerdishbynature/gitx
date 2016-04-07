@@ -7,11 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <Sparkle/Sparkle.h>
 #import "PBGitRepository.h"
 
 @class PBCloneRepositoryPanel;
 
-@interface ApplicationController : NSObject<NSApplicationDelegate>
+@interface ApplicationController : NSObject <NSApplicationDelegate, SUUpdaterDelegate>
 {
 	IBOutlet NSWindow *window;
 	IBOutlet id firstResponder;
