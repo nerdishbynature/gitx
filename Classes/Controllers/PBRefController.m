@@ -272,33 +272,23 @@
 
 	NSString *ref_desc = [NSString stringWithFormat:@"%@ '%@'", [ref refishType], [ref shortName]];
 
-	NSAlert *alert = [NSAlert alertWithMessageText:[NSString stringWithFormat:@"Delete %@?", ref_desc]
-									 defaultButton:@"Delete"
-								   alternateButton:@"Cancel"
-									   otherButton:nil
-						 informativeTextWithFormat:@"Are you sure you want to remove the %@?", ref_desc];
+	NSAlert *alert = [[NSAlert alloc] init];
+	alert.messageText = [NSString stringWithFormat:@"Delete %@?", ref_desc];
+	alert.informativeText = [NSString stringWithFormat:@"Are you sure you want to remove the %@?", ref_desc];
+	[alert addButtonWithTitle:@"Delete"];
+	[alert addButtonWithTitle:@"Cancel"];
     [alert setShowsSuppressionButton:YES];
-	
-	[alert beginSheetModalForWindow:[historyController.repository.windowController window]
-					  modalDelegate:self
-					 didEndSelector:@selector(deleteRefSheetDidEnd:returnCode:contextInfo:)
-						contextInfo:(__bridge_retained void*)ref];
+	[alert beginSheetModalForWindow:[historyController.repository.windowController window] completionHandler:^(NSModalResponse returnCode) {
+		[[alert window] orderOut:nil];
+
+		if ([[alert suppressionButton] state] == NSOnState)
+			[PBGitDefaults suppressDialogWarningForDialog:kDialogDeleteRef];
+
+		if (returnCode == NSAlertFirstButtonReturn) {
+			[historyController.repository deleteRef:ref];
+		}
+	}];
 }
-
-- (void)deleteRefSheetDidEnd:(NSAlert *)sheet returnCode:(int)returnCode contextInfo:(void  *)contextInfo
-{
-    [[sheet window] orderOut:nil];
-
-	if ([[sheet suppressionButton] state] == NSOnState)
-        [PBGitDefaults suppressDialogWarningForDialog:kDialogDeleteRef];
-
-	if (returnCode == NSAlertDefaultReturn) {
-		PBGitRef *ref = (__bridge PBGitRef *)contextInfo;
-		[historyController.repository deleteRef:ref];
-	}
-}
-
-
 
 #pragma mark Contextual menus
 

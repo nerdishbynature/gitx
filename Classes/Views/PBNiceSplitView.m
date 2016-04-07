@@ -17,11 +17,9 @@ static NSImage *grip;
 {
 	NSString *barPath = [[NSBundle mainBundle] pathForResource:@"mainSplitterBar" ofType:@"tiff"];
 	bar = [[NSImage alloc] initWithContentsOfFile: barPath];
-	[bar setFlipped: YES];
 
 	NSString *gripPath = [[NSBundle mainBundle] pathForResource:@"mainSplitterDimple" ofType:@"tiff"];
 	grip = [[NSImage alloc] initWithContentsOfFile: gripPath];
-	[grip setFlipped: YES];
 }
 
 - (void)drawDividerInRect:(NSRect)aRect

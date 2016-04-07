@@ -49,7 +49,7 @@
 	[me hide];
     [browseSheet beginSheetModalForWindow:me.repoWindow.window
                         completionHandler:^(NSInteger result) {
-                            if (result == NSOKButton) {
+                            if (result == NSAlertFirstButtonReturn) {
                                 NSString* directory = browseSheet.directoryURL.path;
                                 [me.remoteURL setStringValue:directory];
                             }

@@ -79,10 +79,10 @@
 
 - (void)showErrorSheet:(NSError *)error
 {
-	[[NSAlert alertWithError:error] beginSheetModalForWindow:[self window]
-											   modalDelegate:self
-											  didEndSelector:@selector(errorSheetDidEnd:returnCode:contextInfo:)
-												 contextInfo:NULL];
+	NSAlert *alert = [NSAlert alertWithError:error];
+	[alert beginSheetModalForWindow:self.window completionHandler:^(NSModalResponse returnCode) {
+		[self close];
+	}];
 }
 
 
@@ -177,12 +177,5 @@
 		[self.repositoryURL setStringValue:@""];
 	}
 }
-
-
-- (void) errorSheetDidEnd:(NSOpenPanel *)sheet returnCode:(NSInteger)code contextInfo:(void *)info
-{
-	[self close];
-}
-
 
 @end
